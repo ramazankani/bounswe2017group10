@@ -38,6 +38,7 @@
     <string name="create_item_no_images">Topic has been created without images</string>
     <string name="failed_profilgetuserinformation">Failed to get user information</string>
     <string name="profilpage_cultural_heritages_list">My Cultural Heritages</string>
+    <string name="show_nearby_items">Find Nearby Heritages</string>
     <string name="profilpage_gallery">Gallery</string>
     <string name="profilpage_my_favorites">My Favorites</string>
     <string name="profilpage_settings">Settings</string>

@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/profile_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -88,7 +89,19 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:text="@string/profilpage_cultural_heritages_list"/>
-
+            <TextView
+                android:id="@+id/nearbyHeritages"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="@string/show_nearby_items" />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

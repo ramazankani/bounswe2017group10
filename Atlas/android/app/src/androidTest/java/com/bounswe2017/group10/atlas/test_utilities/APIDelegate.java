@@ -6,6 +6,7 @@ import com.bounswe2017.group10.atlas.httpbody.CreateItemResponse;
 import com.bounswe2017.group10.atlas.httpbody.CultureItem;
 import com.bounswe2017.group10.atlas.httpbody.GetItemsResponse;
 import com.bounswe2017.group10.atlas.httpbody.ImageUploadRequest;
+import com.bounswe2017.group10.atlas.httpbody.LocationRequest;
 import com.bounswe2017.group10.atlas.httpbody.LoginRequest;
 import com.bounswe2017.group10.atlas.httpbody.LoginResponse;
 import com.bounswe2017.group10.atlas.httpbody.PostCommentRequest;
@@ -86,6 +87,11 @@ public class APIDelegate implements API {
     }
 
     @Override
+    public Call<GetItemsResponse> nearBySearch(String authStr, LocationRequest location) {
+        return api.nearBySearch(authStr,location);
+    }
+
+    @Override
     public Call<Void> deleteItem(String authStr, long id) {
         return api.deleteItem(authStr, id);
     }
@@ -99,4 +105,5 @@ public class APIDelegate implements API {
     public Call<GetItemsResponse> search(String authStr, String query) {
         return api.search(authStr, query);
     }
+
 }

@@ -7,6 +7,7 @@ import com.bounswe2017.group10.atlas.httpbody.CultureItem;
 import com.bounswe2017.group10.atlas.httpbody.GetItemsResponse;
 import com.bounswe2017.group10.atlas.httpbody.Image;
 import com.bounswe2017.group10.atlas.httpbody.ImageUploadRequest;
+import com.bounswe2017.group10.atlas.httpbody.LocationRequest;
 import com.bounswe2017.group10.atlas.httpbody.LoginRequest;
 import com.bounswe2017.group10.atlas.httpbody.LoginResponse;
 import com.bounswe2017.group10.atlas.httpbody.PostCommentRequest;
@@ -76,4 +77,7 @@ public interface API {
     Call<Comment> postComment(@Header("Authorization") String authStr,
                                     @Path("id") long id,
                                     @Body PostCommentRequest comment);
+    @GET("/nearby_items")
+    Call<GetItemsResponse> nearBySearch(@Header("Authorization") String authStr,
+                                        @Body LocationRequest location);
 }
